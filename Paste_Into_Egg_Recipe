@@ -1,1 +1,19 @@
-
+"Recipe": {
+    "TimeSeconds": 0,
+    "Input": [
+      {
+        "ItemId": "Rock",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Tinkering",
+        "Categories": [
+          "Workbench_Crafting"
+        ],
+        "RequiredTierLevel": 0
+      }
+    ]
+  },
