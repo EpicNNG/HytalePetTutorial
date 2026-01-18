@@ -1,0 +1,117 @@
+  "Instructions": [
+    {
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Despawn"
+          },
+          "ActionsAtomic": true,
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "DropItem",
+                  "Item": "ENTER YOUR  EGG SPAWNER HERE",
+                  "Distance": [
+                    0,
+                    0
+                  ],
+                  "ThrowSpeed": 1,
+                  "Once": true
+                }
+              ]
+            },
+            {
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Despawn"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Idle"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "State",
+                "State": ".Default"
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Player",
+                    "Range": 35,
+                    "LockOnTarget": true,
+                    "GetPlayers": true
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": 3,
+                    "StopDistance": 1.5,
+                    "RelativeSpeed": 0.8
+                  }
+                },
+                {
+                  "Sensor": {
+                    "Type": "Target",
+                    "Range": 15,
+                    "MinRange": 15
+                  },
+                  "BodyMotion": {
+                    "Type": "Teleport",
+                    "OffsetRange": [
+                      1,
+                      3
+                    ],
+                    "MaxYOffset": 2
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "InteractionInstruction": {
+    "Instructions": [
+      {
+        "Continue": true,
+        "Sensor": {
+          "Type": "Any"
+        },
+        "Actions": [
+          {
+            "Type": "SetInteractable",
+            "Interactable": true
+          }
+        ]
+      },
+      {
+        "Sensor": {
+          "Type": "HasInteracted"
+        },
+        "Actions": [
+          {
+            "Type": "LockOnInteractionTarget"
+          },
+          {
+            "Type": "State",
+            "State": "Despawn"
+          }
+        ]
+      }
+    ]
+  },
