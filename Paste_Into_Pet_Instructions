@@ -17,12 +17,12 @@
               "Actions": [
                 {
                   "Type": "DropItem",
-                  "Item": "ENTER YOUR  EGG SPAWNER HERE",
+                  "Item": "YOUR EGG NAME HERE",
                   "Distance": [
                     0,
                     0
                   ],
-                  "ThrowSpeed": 1,
+                  "ThrowSpeed": 12,
                   "Once": true
                 }
               ]
@@ -52,7 +52,7 @@
                 {
                   "Sensor": {
                     "Type": "Player",
-                    "Range": 35,
+                    "Range": 15,
                     "LockOnTarget": true,
                     "GetPlayers": true
                   },
@@ -66,14 +66,14 @@
                 {
                   "Sensor": {
                     "Type": "Target",
-                    "Range": 15,
-                    "MinRange": 15
+                    "Range": 25,
+                    "MinRange": 25
                   },
                   "BodyMotion": {
                     "Type": "Teleport",
                     "OffsetRange": [
                       1,
-                      3
+                      2
                     ],
                     "MaxYOffset": 2
                   }
