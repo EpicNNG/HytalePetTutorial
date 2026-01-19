@@ -17,7 +17,3 @@
       }
     ]
   },
-  "Next": {
-    "Type": "ModifyInventory",
-    "AdjustHeldItemQuantity": -1
-  },
