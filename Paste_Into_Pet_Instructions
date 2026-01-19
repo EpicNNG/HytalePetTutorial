@@ -60,7 +60,7 @@
                     "Type": "Seek",
                     "SlowDownDistance": 3,
                     "StopDistance": 1.5,
-                    "RelativeSpeed": 0.8
+                    "RelativeSpeed": 1.5
                   }
                 },
                 {
